@@ -7,8 +7,10 @@ Job Search System
 Goal : Optimized the system to stay on a modulith project.
 
 - Java 21
+- Jetty Server
 - Gradle Kotlin DSL
 - Native executable (GraalVM)
+- Angular
 - Containerized (Docker)
 
 # Quick Functionnal Specifications
