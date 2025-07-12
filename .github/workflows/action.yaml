@@ -16,8 +16,8 @@ jobs:
       - name: Installation de Java
         run: sudo apt install openjdk-21-jdk-headless
       - name: Lecture de la version de java installée.
-        run: java -version
+        run: java -version && update-java-alternatives --list
       - name: Affichage du répertoire courant.
-        run: pwd
+        run: pwd && ls
       - name: Lancement de la commande "build" du Gradle Wrapper.
         run: ./gradlew build
