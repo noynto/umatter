@@ -13,10 +13,10 @@ jobs:
         run: sudo apt upgrade -y
       - name: Clonage du dépôt.
         uses: actions/checkout@v4
-      - name: Installation de Java
-        run: sudo apt install openjdk-21-jdk-headless
       - name: Lecture de la version de java installée.
         run: java -version && update-java-alternatives --list
+      - name: Changement de version Java vers la 21.
+        run: sudo update-java-alternatives --set temurin-21-jdk-amd64
       - name: Affichage du répertoire courant.
         run: pwd && ls
       - name: Lancement de la commande "build" du Gradle Wrapper.
