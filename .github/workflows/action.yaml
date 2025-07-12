@@ -1,0 +1,17 @@
+name: "Action"
+on:
+  push:
+    branches:
+      - *
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Récupération des mises à niveau.
+        run: sudo apt update
+      - name: Mise à niveau des dépendences.
+        run: sudo apt upgrade -y
+      - name: Clonage du dépôt.
+        uses: actions/checkout@v4
+      - name: Installation de Java
+        run: sudo apt install openjdk-21-jdk-headless
